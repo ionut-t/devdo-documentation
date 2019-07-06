@@ -1,0 +1,17 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Documentation for devDo app",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionut-t/devdo-documentation.git"
+  },
+  "author": "Ionut Traistaru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionut-t/devdo-documentation/issues"
+  },
+  "homepage": "https://github.com/ionut-t/devdo-documentation#readme"
+}
