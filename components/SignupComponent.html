@@ -392,8 +392,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:108</a></div>
                 </td>
             </tr>
 
@@ -838,9 +838,10 @@ export class SignupComponent implements OnInit, OnDestroy {
     this.loadingSubscription &#x3D; this.uiService.loadingStateChanged.subscribe(
       isLoading &#x3D;&gt; (this.isLoading &#x3D; isLoading)
     );
-    this.authService.createUser(
+    this.authService.signup(
       this.form.email.value,
-      this.form.password.value
+      this.form.password.value,
+      this.form.confirmPassword.value
     );
   }
 
