@@ -251,8 +251,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="113"
-                            class="link-to-prism">src/app/auth/auth.service.ts:113</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/auth/auth.service.ts:115</a></div>
                 </td>
             </tr>
 
@@ -294,8 +294,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="166"
-                            class="link-to-prism">src/app/auth/auth.service.ts:166</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/app/auth/auth.service.ts:168</a></div>
                 </td>
             </tr>
 
@@ -337,8 +337,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="174"
-                            class="link-to-prism">src/app/auth/auth.service.ts:174</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/auth/auth.service.ts:176</a></div>
                 </td>
             </tr>
 
@@ -501,8 +501,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">src/app/auth/auth.service.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/auth/auth.service.ts:77</a></div>
                 </td>
             </tr>
 
@@ -585,8 +585,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">src/app/auth/auth.service.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/auth/auth.service.ts:133</a></div>
                 </td>
             </tr>
 
@@ -628,8 +628,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="158"
-                            class="link-to-prism">src/app/auth/auth.service.ts:158</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/app/auth/auth.service.ts:160</a></div>
                 </td>
             </tr>
 
@@ -714,8 +714,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="149"
-                            class="link-to-prism">src/app/auth/auth.service.ts:149</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/auth/auth.service.ts:151</a></div>
                 </td>
             </tr>
 
@@ -779,7 +779,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>signup(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, confirmPassword: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>signup(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, confirmPassword: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -808,6 +808,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                                 <tr>
                                     <td>email</td>
                                     <td>
@@ -986,7 +998,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
-import { AuthData } from &#x27;./auth-data.model&#x27;;
+import { User } from &#x27;./user.model&#x27;;
 import { BehaviorSubject } from &#x27;rxjs&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { UIService } from &#x27;../shared/ui.service&#x27;;
@@ -995,7 +1007,7 @@ import { environment } from &#x27;../../environments/environment&#x27;;
 /**
  * API URL
  */
-const BACKEND_URL &#x3D; environment.apiUrl + &#x27;/user/&#x27;;
+const API_URL &#x3D; environment.apiUrl + &#x27;/user/&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -1038,10 +1050,15 @@ export class AuthService {
   /**
    * Create user.
    */
-  signup(email: string, password: string, confirmPassword: string) {
+  signup(
+    username: string,
+    email: string,
+    password: string,
+    confirmPassword: string
+  ) {
     this.uiService.loadingStateChanged.next(true);
-    const authData: AuthData &#x3D; { email, password, confirmPassword };
-    this.http.post(&#x60;${BACKEND_URL}signup&#x60;, authData).subscribe(
+    const authData: User &#x3D; { username, email, password, confirmPassword };
+    this.http.post(&#x60;${API_URL}signup&#x60;, authData).subscribe(
       response &#x3D;&gt; {
         this.router.navigate([&#x27;/user/login&#x27;]);
         this.uiService.loadingStateChanged.next(false);
@@ -1057,12 +1074,9 @@ export class AuthService {
    */
   login(email: string, password: string) {
     this.uiService.loadingStateChanged.next(true);
-    const authData: AuthData &#x3D; { email, password };
+    const authData: User &#x3D; { email, password };
     this.http
-      .post&lt;{ token: string; expiresIn: number }&gt;(
-        &#x60;${BACKEND_URL}login&#x60;,
-        authData
-      )
+      .post&lt;{ token: string; expiresIn: number }&gt;(&#x60;${API_URL}login&#x60;, authData)
       .subscribe(
         response &#x3D;&gt; {
           const token &#x3D; response.token;
@@ -1180,6 +1194,7 @@ export class AuthService {
 
 
 
+                   
 
 
 
@@ -1202,6 +1217,7 @@ export class AuthService {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'AuthService.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

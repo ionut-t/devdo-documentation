@@ -73,16 +73,14 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { BoardComponent } from &#x27;./board.component&#x27;;
-import { EditTaskComponent } from &#x27;./edit-task/edit-task.component&#x27;;
+import { EditTaskComponent } from &#x27;./tasks/edit-task/edit-task.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
     component: BoardComponent
   },
-  { path: &#x27;todo/edit/:todoId&#x27;, component: EditTaskComponent },
-  { path: &#x27;doing/edit/:doingId&#x27;, component: EditTaskComponent },
-  { path: &#x27;done/edit/:doneId&#x27;, component: EditTaskComponent }
+  { path: &#x27;tasks/edit/:taskId&#x27;, component: EditTaskComponent }
 ];
 
 @NgModule({
@@ -103,6 +101,7 @@ export class BoardRoutingModule {}
 
 
 
+                   
 
 
 
@@ -125,6 +124,7 @@ export class BoardRoutingModule {}
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
             var COMPODOC_CURRENT_PAGE_URL = 'BoardRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

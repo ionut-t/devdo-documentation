@@ -180,6 +180,9 @@
                             <li>
                                 <a href="#passwordErrorHandler">passwordErrorHandler</a>
                             </li>
+                            <li>
+                                <a href="#usernameErrorHandler">usernameErrorHandler</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -310,8 +313,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:89</a></div>
                 </td>
             </tr>
 
@@ -351,8 +354,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:58</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:65</a></div>
                 </td>
             </tr>
 
@@ -392,15 +395,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="108"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:108</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:114</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Unsubscribe from subscriptions</p>
+                    <div class="io-description"><p>Unsubscribe from subscriptions.</p>
 </div>
 
                     <div class="io-description">
@@ -433,8 +436,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:26</a></div>
                 </td>
             </tr>
 
@@ -474,15 +477,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:101</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Call create user</p>
+                    <div class="io-description"><p>Signup user</p>
 </div>
 
                     <div class="io-description">
@@ -515,8 +518,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">src/app/auth/signup/signup.component.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:77</a></div>
                 </td>
             </tr>
 
@@ -528,6 +531,47 @@
 
                     <div class="io-description">
                         <b>Returns : </b>    <code>&quot;You must enter a password&quot; | &quot;The password is too short. Please enter minimum 6 characters&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usernameErrorHandler"></a>
+                    <span class="name">
+                        <b>
+                            usernameErrorHandler
+                        </b>
+                        <a href="#usernameErrorHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>usernameErrorHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/auth/signup/signup.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handle sign up form errors -&gt; email field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >&quot;You must enter a valid username&quot; | &quot;Username must have minimum 3 characters&quot;</a></code>
 
                     </div>
                 </td>
@@ -723,7 +767,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/auth/signup/signup.component.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/auth/signup/signup.component.ts:46</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -761,23 +805,18 @@ export class SignupComponent implements OnInit, OnDestroy {
   private loadingSubscription: Subscription;
   private authStatusSubscription: Subscription;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private uiService: UIService
-  ) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private uiService: UIService) {}
 
   /**
    * Create and validate the reactive sign up form.
    */
   ngOnInit() {
-    this.authStatusSubscription &#x3D; this.authService
-      .getAuthStatusListener()
-      .subscribe(authStatus &#x3D;&gt; {
-        this.isLoading &#x3D; false;
-      });
+    this.authStatusSubscription &#x3D; this.authService.getAuthStatusListener().subscribe(authStatus &#x3D;&gt; {
+      this.isLoading &#x3D; false;
+    });
     this.signupForm &#x3D; this.formBuilder.group(
       {
+        username: [&#x27;&#x27;, [Validators.required, Validators.minLength(3)]],
         email: [&#x27;&#x27;, [Validators.required, Validators.email]],
         password: [&#x27;&#x27;, [Validators.required, Validators.minLength(6)]],
         confirmPassword: [&#x27;&#x27;, Validators.required]
@@ -793,6 +832,18 @@ export class SignupComponent implements OnInit, OnDestroy {
    */
   get form() {
     return this.signupForm.controls;
+  }
+
+  /**
+   * Handle sign up form errors -&gt; email field.
+   */
+  usernameErrorHandler() {
+    if (this.form.username.hasError(&#x27;required&#x27;)) {
+      return &#x27;You must enter a valid username&#x27;;
+    } else if (this.form.username.hasError(&#x27;minlength&#x27;)) {
+      return &#x27;Username must have minimum 3 characters&#x27;;
+    }
+    return null;
   }
 
   /**
@@ -832,13 +883,12 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Call create user
+   * Signup user
    */
   onSubmit() {
-    this.loadingSubscription &#x3D; this.uiService.loadingStateChanged.subscribe(
-      isLoading &#x3D;&gt; (this.isLoading &#x3D; isLoading)
-    );
+    this.loadingSubscription &#x3D; this.uiService.loadingStateChanged.subscribe(isLoading &#x3D;&gt; (this.isLoading &#x3D; isLoading));
     this.authService.signup(
+      this.form.username.value,
       this.form.email.value,
       this.form.password.value,
       this.form.confirmPassword.value
@@ -846,7 +896,7 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Unsubscribe from subscriptions
+   * Unsubscribe from subscriptions.
    */
   ngOnDestroy() {
     if (this.loadingSubscription) {
@@ -869,6 +919,16 @@ export class SignupComponent implements OnInit, OnDestroy {
   (ngSubmit)&#x3D;&quot;onSubmit()&quot;
   *ngIf&#x3D;&quot;!isLoading&quot;
 &gt;
+  &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+    &lt;input
+      matInput
+      type&#x3D;&quot;text&quot;
+      placeholder&#x3D;&quot;Enter a username&quot;
+      formControlName&#x3D;&quot;username&quot;
+    /&gt;
+    &lt;mat-error *ngIf&#x3D;&quot;form.username.invalid&quot;&gt;{{ usernameErrorHandler() }}&lt;/mat-error&gt;
+  &lt;/mat-form-field&gt;
+
   &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
     &lt;input
       matInput
@@ -956,8 +1016,8 @@ export class SignupComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner *ngIf="isLoading"></mat-spinner><form  class="user-form"  [formGroup]="signupForm"  (ngSubmit)="onSubmit()"  *ngIf="!isLoading">  <mat-form-field class="user-form-field">    <input      matInput      type="email"      placeholder="Enter your email"      formControlName="email"    />    <mat-error *ngIf="form.email.invalid">{{ emailErrorHandler() }}</mat-error>  </mat-form-field>  <mat-form-field    class="user-form-field"    hintLabel="Password must contain minim 6 characters"  >    <input      matInput      [type]="hidePassword ? \'password\' : \'text\'"      placeholder="Enter a password"      formControlName="password"    />    <mat-icon matSuffix (click)="hidePassword = !hidePassword">      {{ hidePassword ? "visibility_off" : "visibility" }}    </mat-icon>    <mat-hint align="end">{{ form.password.value?.length || 0 }}/6</mat-hint>    <mat-error *ngIf="form.password.invalid">      {{ passwordErrorHandler() }}    </mat-error>  </mat-form-field>  <mat-form-field class="user-form-field">    <input      matInput      [type]="hideConfirmPassword ? \'password\' : \'text\'"      placeholder="Confirm your password"      formControlName="confirmPassword"    />    <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">      {{ hideConfirmPassword ? "visibility_off" : "visibility" }}    </mat-icon>    <mat-error *ngIf="form.confirmPassword.invalid">      {{ confirmPasswordErrorHandler() }}    </mat-error>  </mat-form-field>  <button    mat-raised-button    type="submit"    color="primary"    [disabled]="signupForm.invalid"  >    Sign Up  </button></form></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DoingComponent', 'selector': 'app-doing'},{'name': 'DoneComponent', 'selector': 'app-done'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TodoComponent', 'selector': 'app-todo'}];
+        var COMPONENT_TEMPLATE = '<div><mat-spinner *ngIf="isLoading"></mat-spinner><form  class="user-form"  [formGroup]="signupForm"  (ngSubmit)="onSubmit()"  *ngIf="!isLoading">  <mat-form-field class="user-form-field">    <input      matInput      type="text"      placeholder="Enter a username"      formControlName="username"    />    <mat-error *ngIf="form.username.invalid">{{ usernameErrorHandler() }}</mat-error>  </mat-form-field>  <mat-form-field class="user-form-field">    <input      matInput      type="email"      placeholder="Enter your email"      formControlName="email"    />    <mat-error *ngIf="form.email.invalid">{{ emailErrorHandler() }}</mat-error>  </mat-form-field>  <mat-form-field    class="user-form-field"    hintLabel="Password must contain minim 6 characters"  >    <input      matInput      [type]="hidePassword ? \'password\' : \'text\'"      placeholder="Enter a password"      formControlName="password"    />    <mat-icon matSuffix (click)="hidePassword = !hidePassword">      {{ hidePassword ? "visibility_off" : "visibility" }}    </mat-icon>    <mat-hint align="end">{{ form.password.value?.length || 0 }}/6</mat-hint>    <mat-error *ngIf="form.password.invalid">      {{ passwordErrorHandler() }}    </mat-error>  </mat-form-field>  <mat-form-field class="user-form-field">    <input      matInput      [type]="hideConfirmPassword ? \'password\' : \'text\'"      placeholder="Confirm your password"      formControlName="confirmPassword"    />    <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">      {{ hideConfirmPassword ? "visibility_off" : "visibility" }}    </mat-icon>    <mat-error *ngIf="form.confirmPassword.invalid">      {{ confirmPasswordErrorHandler() }}    </mat-error>  </mat-form-field>  <button    mat-raised-button    type="submit"    color="primary"    [disabled]="signupForm.invalid"  >    Sign Up  </button></form></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SignupComponent'};
 </script>
@@ -972,6 +1032,7 @@ export class SignupComponent implements OnInit, OnDestroy {
 
 
 
+                   
 
 
 
@@ -994,6 +1055,7 @@ export class SignupComponent implements OnInit, OnDestroy {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'SignupComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

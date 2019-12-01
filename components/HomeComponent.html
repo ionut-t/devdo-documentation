@@ -482,20 +482,22 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;home&quot;&gt;
-  &lt;div class&#x3D;&quot;home__cta&quot;&gt;
-    &lt;p&gt;
-      devDo helps you to keep track of your project progress and never miss a
-      deadline.
-    &lt;/p&gt;
-    &lt;button
-      mat-raised-button
-      class&#x3D;&quot;mat-elevation-z24&quot;
-      color&#x3D;&quot;primary&quot;
-      (click)&#x3D;&quot;onSignUp()&quot;
-      *ngIf&#x3D;&quot;!isAuth&quot;
-    &gt;
-      Sign Up!
-    &lt;/button&gt;
+  &lt;div class&#x3D;&quot;overlay&quot;&gt;
+    &lt;div class&#x3D;&quot;home__cta&quot;&gt;
+      &lt;p&gt;
+        devDo helps you to keep track of your project progress and never miss a
+        deadline.
+      &lt;/p&gt;
+      &lt;button
+        mat-raised-button
+        class&#x3D;&quot;mat-elevation-z24&quot;
+        color&#x3D;&quot;primary&quot;
+        (click)&#x3D;&quot;onSignUp()&quot;
+        *ngIf&#x3D;&quot;!isAuth&quot;
+      &gt;
+        Sign Up!
+      &lt;/button&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -506,33 +508,35 @@ export class HomeComponent implements OnInit, OnDestroy {
                     <code>./home.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.home {
-  background: linear-gradient(
-      to right bottom,
-      rgba(232, 73, 126, 0.8),
-      rgba(233, 30, 99, 0.8)
-    ),
-    url(../../../assets/img/home-image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(/assets/img/home-image.jpg) no-repeat center center/cover;
   height: calc(100% - 64px);
   position: relative;
 }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .home__cta {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  color: #fff;
-  width: 250px;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+  min-width: 25rem;
+  height: 100%;
 }
 
 .home__cta p {
   line-height: 1.6;
-  text-align: center;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 599px) {
@@ -568,8 +572,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="home">  <div class="home__cta">    <p>      devDo helps you to keep track of your project progress and never miss a      deadline.    </p>    <button      mat-raised-button      class="mat-elevation-z24"      color="primary"      (click)="onSignUp()"      *ngIf="!isAuth"    >      Sign Up!    </button>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DoingComponent', 'selector': 'app-doing'},{'name': 'DoneComponent', 'selector': 'app-done'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TodoComponent', 'selector': 'app-todo'}];
+        var COMPONENT_TEMPLATE = '<div><div class="home">  <div class="overlay">    <div class="home__cta">      <p>        devDo helps you to keep track of your project progress and never miss a        deadline.      </p>      <button        mat-raised-button        class="mat-elevation-z24"        color="primary"        (click)="onSignUp()"        *ngIf="!isAuth"      >        Sign Up!      </button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>
@@ -584,6 +588,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
 
+                   
 
 
 
@@ -606,6 +611,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

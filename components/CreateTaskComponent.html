@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/board/todo/create-task/create-task.component.ts</code>
+    <code>src/app/board/tasks/create-task/create-task.component.ts</code>
 </p>
 
     <p class="comment">
@@ -73,12 +73,6 @@
     </p>
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
 
 
 <section>
@@ -138,9 +132,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
-                            </li>
-                            <li>
                                 <a href="#onClose">onClose</a>
                             </li>
                             <li>
@@ -178,12 +169,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(boardService: <a href="../injectables/BoardService.html">BoardService</a>)</code>
+<code>constructor(taskService: <a href="../injectables/TaskService.html">TaskService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/board/todo/create-task/create-task.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/board/tasks/create-task/create-task.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -201,10 +192,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>boardService</td>
+                                                        <td>taskService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/BoardService.html" target="_self" >BoardService</a></code>
+                                                                        <code><a href="../injectables/TaskService.html" target="_self" >TaskService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -240,7 +231,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/board/todo/create-task/create-task.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/board/tasks/create-task/create-task.component.ts:14</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -253,45 +244,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/board/todo/create-task/create-task.component.ts:18</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -314,15 +266,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/board/todo/create-task/create-task.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/board/tasks/create-task/create-task.component.ts:37</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Close modal</p>
+                    <div class="io-description"><p>Close modal.</p>
 </div>
 
                     <div class="io-description">
@@ -355,15 +307,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/board/todo/create-task/create-task.component.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/board/tasks/create-task/create-task.component.ts:21</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create new task</p>
+                    <div class="io-description"><p>Create new task.</p>
 </div>
 
                     <div class="io-description">
@@ -411,9 +363,9 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Output, EventEmitter } from &#x27;@angular/core&#x27;;
-import { BoardService } from &#x27;../../board.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 import { NgForm } from &#x27;@angular/forms&#x27;;
+import { TaskService } from &#x27;../../task.service&#x27;;
 
 /**
  * Dynamic component for creating new tasks
@@ -423,28 +375,29 @@ import { NgForm } from &#x27;@angular/forms&#x27;;
   templateUrl: &#x27;./create-task.component.html&#x27;,
   styleUrls: [&#x27;./create-task.component.css&#x27;]
 })
-export class CreateTaskComponent implements OnInit {
+export class CreateTaskComponent {
   @Output() close &#x3D; new EventEmitter&lt;void&gt;();
 
-  constructor(private boardService: BoardService) {}
-
-  ngOnInit() {}
+  constructor(private taskService: TaskService) {}
 
   /**
-   * Create new task
+   * Create new task.
    */
   onSave(form: NgForm) {
     if (form.invalid) {
       return;
     }
 
-    this.boardService.addTodoTask(form.value.title, form.value.description);
+    this.taskService
+      .createTask({ id: null, title: form.value.title, description: form.value.description })
+      .subscribe(res &#x3D;&gt; this.taskService.updateTasksList(res.body.task));
+
     form.resetForm();
     this.onClose();
   }
 
   /**
-   * Close modal
+   * Close modal.
    */
   onClose() {
     this.close.emit();
@@ -455,17 +408,10 @@ export class CreateTaskComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;backdrop&quot; (click)&#x3D;&quot;onClose()&quot;&gt;&lt;/div&gt;
-&lt;div class&#x3D;&quot;container&quot;&gt;
-  &lt;form class&#x3D;&quot;form-create&quot; (submit)&#x3D;&quot;onSave(createForm)&quot; #createForm&#x3D;&quot;ngForm&quot;&gt;
+&lt;mat-card class&#x3D;&quot;modal&quot;&gt;
+  &lt;form class&#x3D;&quot;modal__form&quot; (submit)&#x3D;&quot;onSave(createForm)&quot; #createForm&#x3D;&quot;ngForm&quot;&gt;
     &lt;mat-form-field&gt;
-      &lt;input
-        matInput
-        placeholder&#x3D;&quot;title&quot;
-        ngModel
-        name&#x3D;&quot;title&quot;
-        required
-        #title&#x3D;&quot;ngModel&quot;
-      /&gt;
+      &lt;input matInput placeholder&#x3D;&quot;title&quot; ngModel name&#x3D;&quot;title&quot; required #title&#x3D;&quot;ngModel&quot; /&gt;
       &lt;mat-error *ngIf&#x3D;&quot;title.invalid&quot;&gt;
         Title field must not be empty
       &lt;/mat-error&gt;
@@ -481,16 +427,11 @@ export class CreateTaskComponent implements OnInit {
         #description&#x3D;&quot;ngModel&quot;
       &gt;&lt;/textarea&gt;
       &lt;mat-error *ngIf&#x3D;&quot;description.invalid&quot;&gt;
-        description field must not be empty
+        Description field must not be empty
       &lt;/mat-error&gt;
     &lt;/mat-form-field&gt;
-    &lt;div class&#x3D;&quot;form-create__actions&quot;&gt;
-      &lt;button
-        type&#x3D;&quot;submit&quot;
-        mat-button
-        color&#x3D;&quot;accent&quot;
-        [disabled]&#x3D;&quot;createForm.invalid&quot;
-      &gt;
+    &lt;div class&#x3D;&quot;modal__actions&quot;&gt;
+      &lt;button type&#x3D;&quot;submit&quot; mat-button color&#x3D;&quot;accent&quot; [disabled]&#x3D;&quot;createForm.invalid&quot;&gt;
         SAVE
       &lt;/button&gt;
       &lt;button type&#x3D;&quot;button&quot; mat-button color&#x3D;&quot;warn&quot; (click)&#x3D;&quot;onClose()&quot;&gt;
@@ -498,7 +439,7 @@ export class CreateTaskComponent implements OnInit {
       &lt;/button&gt;
     &lt;/div&gt;
   &lt;/form&gt;
-&lt;/div&gt;
+&lt;/mat-card&gt;
 </code></pre>
     </div>
 
@@ -506,43 +447,7 @@ export class CreateTaskComponent implements OnInit {
                 <p class="comment">
                     <code>./create-task.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-}
-
-.container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  background-color: #fdfdfd;
-  padding: 25px 0;
-  z-index: 200;
-  border-radius: 4px;
-  box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.6);
-}
-
-.form-create {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.form-create__actions {
-  display: flex;
-  justify-content: center;
-}
-
-mat-form-field {
+                <pre class="line-numbers"><code class="language-scss">mat-form-field {
   margin-bottom: 8px;
 }
 </code></pre>
@@ -573,8 +478,8 @@ mat-form-field {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="backdrop" (click)="onClose()"></div><div class="container">  <form class="form-create" (submit)="onSave(createForm)" #createForm="ngForm">    <mat-form-field>      <input        matInput        placeholder="title"        ngModel        name="title"        required        #title="ngModel"      />      <mat-error *ngIf="title.invalid">        Title field must not be empty      </mat-error>    </mat-form-field>    <mat-form-field>      <textarea        matInput        placeholder="description"        rows="5"        ngModel        name="description"        required        #description="ngModel"      ></textarea>      <mat-error *ngIf="description.invalid">        description field must not be empty      </mat-error>    </mat-form-field>    <div class="form-create__actions">      <button        type="submit"        mat-button        color="accent"        [disabled]="createForm.invalid"      >        SAVE      </button>      <button type="button" mat-button color="warn" (click)="onClose()">        CANCEL      </button>    </div>  </form></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DoingComponent', 'selector': 'app-doing'},{'name': 'DoneComponent', 'selector': 'app-done'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TodoComponent', 'selector': 'app-todo'}];
+        var COMPONENT_TEMPLATE = '<div><div class="backdrop" (click)="onClose()"></div><mat-card class="modal">  <form class="modal__form" (submit)="onSave(createForm)" #createForm="ngForm">    <mat-form-field>      <input matInput placeholder="title" ngModel name="title" required #title="ngModel" />      <mat-error *ngIf="title.invalid">        Title field must not be empty      </mat-error>    </mat-form-field>    <mat-form-field>      <textarea        matInput        placeholder="description"        rows="5"        ngModel        name="description"        required        #description="ngModel"      ></textarea>      <mat-error *ngIf="description.invalid">        Description field must not be empty      </mat-error>    </mat-form-field>    <div class="modal__actions">      <button type="submit" mat-button color="accent" [disabled]="createForm.invalid">        SAVE      </button>      <button type="button" mat-button color="warn" (click)="onClose()">        CANCEL      </button>    </div>  </form></mat-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CreateTaskComponent'};
 </script>
@@ -589,6 +494,7 @@ mat-form-field {
 
 
 
+                   
 
 
 
@@ -611,6 +517,7 @@ mat-form-field {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'CreateTaskComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

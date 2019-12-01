@@ -244,13 +244,14 @@ export class BoardComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;board&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;section class&#x3D;&quot;board&quot;&gt;
   &lt;app-todo class&#x3D;&quot;board__item&quot;&gt;&lt;/app-todo&gt;
   &lt;mat-divider [vertical]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
   &lt;app-doing class&#x3D;&quot;board__item&quot;&gt;&lt;/app-doing&gt;
   &lt;mat-divider [vertical]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
   &lt;app-done class&#x3D;&quot;board__item&quot;&gt;&lt;/app-done&gt;
-&lt;/section&gt;
+&lt;/section&gt; --&gt;
+&lt;app-tasks&gt;&lt;/app-tasks&gt;
 </code></pre>
     </div>
 
@@ -309,8 +310,8 @@ export class BoardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="board">  <app-todo class="board__item"></app-todo>  <mat-divider [vertical]="true"></mat-divider>  <app-doing class="board__item"></app-doing>  <mat-divider [vertical]="true"></mat-divider>  <app-done class="board__item"></app-done></section></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DoingComponent', 'selector': 'app-doing'},{'name': 'DoneComponent', 'selector': 'app-done'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TodoComponent', 'selector': 'app-todo'}];
+        var COMPONENT_TEMPLATE = '<div><!-- <section class="board">  <app-todo class="board__item"></app-todo>  <mat-divider [vertical]="true"></mat-divider>  <app-doing class="board__item"></app-doing>  <mat-divider [vertical]="true"></mat-divider>  <app-done class="board__item"></app-done></section> --><app-tasks></app-tasks></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'EditTaskComponent', 'selector': 'app-edit-task'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'BoardComponent'};
 </script>
@@ -325,6 +326,7 @@ export class BoardComponent implements OnInit {
 
 
 
+                   
 
 
 
@@ -347,6 +349,7 @@ export class BoardComponent implements OnInit {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'BoardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -175,6 +175,9 @@
 })
 export class UppercaseFirstLetterPipe implements PipeTransform {
   transform(value: any): any {
+    if (!value) {
+      return;
+    }
     return value.charAt(0).toUpperCase() + value.slice(1);
   }
 }
@@ -186,6 +189,7 @@ export class UppercaseFirstLetterPipe implements PipeTransform {
 
 
 
+                   
 
 
 
@@ -208,6 +212,7 @@ export class UppercaseFirstLetterPipe implements PipeTransform {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'pipe';
             var COMPODOC_CURRENT_PAGE_URL = 'UppercaseFirstLetterPipe.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

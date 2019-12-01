@@ -43,6 +43,7 @@
 
 
 
+                   
 
 <ol class="breadcrumb">
   <li>Miscellaneous</li>
@@ -57,10 +58,7 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#BACKEND_URL" title="src/app/auth/auth.service.ts"><b>BACKEND_URL</b>&nbsp;&nbsp;&nbsp;(src/.../auth.service.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#BACKEND_URL" title="src/app/board/board.service.ts"><b>BACKEND_URL</b>&nbsp;&nbsp;&nbsp;(src/.../board.service.ts)</a>
+                            <a href="#API_URL" title="src/app/auth/auth.service.ts"><b>API_URL</b>&nbsp;&nbsp;&nbsp;(src/.../auth.service.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
@@ -81,47 +79,17 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="BACKEND_URL"></a>
+                        <a name="API_URL"></a>
                         <span class="name">
                             <b>
-                            BACKEND_URL</b>
-                            <a href="#BACKEND_URL"><span class="icon ion-ios-link"></span></a>
+                            API_URL</b>
+                            <a href="#API_URL"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>environment.apiUrl + &#x27;/user/&#x27;</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>API URL</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-    <h3>src/app/board/board.service.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="BACKEND_URL"></a>
-                        <span class="name">
-                            <b>
-                            BACKEND_URL</b>
-                            <a href="#BACKEND_URL"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>environment.apiUrl</code>
                         </td>
                     </tr>
 
@@ -158,7 +126,8 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
-  production: true
+  production: true,
+  apiUrl: HEROKU_URL
 }</code>
                         </td>
                     </tr>
@@ -191,7 +160,7 @@
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
   production: false,
-  apiUrl: &#x27;http://localhost:3000/api&#x27;
+  apiUrl: &#x27;http://localhost:3000/api/v2&#x27;
 }</code>
                         </td>
                     </tr>
@@ -221,6 +190,7 @@
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
             var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
