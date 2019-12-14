@@ -269,8 +269,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/core/home/home.component.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/core/home/home.component.ts:36</a></div>
                 </td>
             </tr>
 
@@ -349,8 +349,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/core/home/home.component.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/core/home/home.component.ts:29</a></div>
                 </td>
             </tr>
 
@@ -456,16 +456,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.authListenerSubscription &#x3D; this.authService
       .getAuthStatusListener()
-      .subscribe(isAuth &#x3D;&gt; {
-        this.isAuth &#x3D; isAuth;
-      });
+      .subscribe(isAuth &#x3D;&gt; (this.isAuth &#x3D; isAuth));
   }
 
   /**
    * Redirect user to sign up page
    */
   onSignUp() {
-    this.router.navigate([&#x27;/user/signup&#x27;]);
+    this.router.navigateByUrl(&#x27;/authentication/signup&#x27;);
   }
 
   /**
@@ -573,7 +571,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="home">  <div class="overlay">    <div class="home__cta">      <p>        devDo helps you to keep track of your project progress and never miss a        deadline.      </p>      <button        mat-raised-button        class="mat-elevation-z24"        color="primary"        (click)="onSignUp()"        *ngIf="!isAuth"      >        Sign Up!      </button>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

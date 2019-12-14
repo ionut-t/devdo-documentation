@@ -84,7 +84,7 @@ const routes: Routes &#x3D; [
     canLoad: [AuthGuard]
   },
   {
-    path: &#x27;user&#x27;,
+    path: &#x27;authentication&#x27;,
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;./auth/auth.module&#x27;).then(m &#x3D;&gt; m.AuthModule)&quot;
   },
   { path: &#x27;page-not-found&#x27;, component: PageNotFoundComponent },

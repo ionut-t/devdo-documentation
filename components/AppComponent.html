@@ -240,7 +240,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Authenticate user automatically</p>
+                    <div class="io-description"><p>Initialize authentication.</p>
 </div>
 
                     <div class="io-description">
@@ -272,10 +272,10 @@ export class AppComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   /**
-   * Authenticate user automatically
+   * Initialize authentication.
    */
   ngOnInit() {
-    this.authService.autoAuthUser();
+    this.authService.initAuthentication();
   }
 }
 </code></pre>
@@ -321,7 +321,7 @@ export class AppComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><app-sidenav>  <router-outlet></router-outlet></app-sidenav></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

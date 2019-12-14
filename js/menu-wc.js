@@ -186,6 +186,27 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/EmailModule.html" data-type="entity-link">EmailModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' : 'data-target="#xs-components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' :
+                                            'id="xs-components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' }>
+                                            <li class="link">
+                                                <a href="components/VerifyEmailComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">VerifyEmailComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/EmailRoutingModule.html" data-type="entity-link">EmailRoutingModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/MaterialModule.html" data-type="entity-link">MaterialModule</a>
                             </li>
                             <li class="link">
@@ -231,6 +252,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="link">
                                     <a href="injectables/UIService.html" data-type="entity-link">UIService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/UserService.html" data-type="entity-link">UserService</a>
                                 </li>
                             </ul>
                         </li>
@@ -278,7 +302,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ITask.html" data-type="entity-link">ITask</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/User.html" data-type="entity-link">User</a>
+                                <a href="interfaces/IUser.html" data-type="entity-link">IUser</a>
                             </li>
                         </ul>
                     </li>

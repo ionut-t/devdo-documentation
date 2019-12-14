@@ -90,6 +90,11 @@
                                     <span class="modifier">Private</span>
                                 <a href="#tokenTimer">tokenTimer</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#URL">URL</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -103,9 +108,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#autoAuthUser">autoAuthUser</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#clearAuthData">clearAuthData</a>
                             </li>
@@ -117,16 +119,29 @@
                                 <a href="#getAuthStatusListener">getAuthStatusListener</a>
                             </li>
                             <li>
+                                <a href="#getEmailVerificationToken">getEmailVerificationToken</a>
+                            </li>
+                            <li>
                                 <a href="#getIsAuth">getIsAuth</a>
                             </li>
                             <li>
                                 <a href="#getToken">getToken</a>
                             </li>
                             <li>
+                                <a href="#initAuthentication">initAuthentication</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isAuth">isAuth</a>
+                            </li>
+                            <li>
                                 <a href="#login">login</a>
                             </li>
                             <li>
                                 <a href="#logout">logout</a>
+                            </li>
+                            <li>
+                                <a href="#resendVerificationToken">resendVerificationToken</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -162,7 +177,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/auth/auth.service.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/auth/auth.service.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -233,47 +248,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="autoAuthUser"></a>
-                    <span class="name">
-                        <b>
-                            autoAuthUser
-                        </b>
-                        <a href="#autoAuthUser"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>autoAuthUser()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="115"
-                            class="link-to-prism">src/app/auth/auth.service.ts:115</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Auto user authentication.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="clearAuthData"></a>
                     <span class="name">
                         <b>
@@ -294,8 +268,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="168"
-                            class="link-to-prism">src/app/auth/auth.service.ts:168</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/auth/auth.service.ts:129</a></div>
                 </td>
             </tr>
 
@@ -337,8 +311,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="176"
-                            class="link-to-prism">src/app/auth/auth.service.ts:176</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/app/auth/auth.service.ts:137</a></div>
                 </td>
             </tr>
 
@@ -349,7 +323,7 @@
 </div>
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{ token: any; expirationDate: any; }</code>
+                        <b>Returns : </b>    <code>literal type</code>
 
                     </div>
                 </td>
@@ -378,8 +352,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/auth/auth.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/auth/auth.service.ts:41</a></div>
                 </td>
             </tr>
 
@@ -390,8 +364,80 @@
 </div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEmailVerificationToken"></a>
+                    <span class="name">
+                        <b>
+                            getEmailVerificationToken
+                        </b>
+                        <a href="#getEmailVerificationToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEmailVerificationToken(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/auth/auth.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get email verification token.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>token</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;literal type&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -419,8 +465,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/auth/auth.service.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/auth/auth.service.ts:34</a></div>
                 </td>
             </tr>
 
@@ -460,8 +506,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/auth/auth.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/auth/auth.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -474,6 +520,119 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initAuthentication"></a>
+                    <span class="name">
+                        <b>
+                            initAuthentication
+                        </b>
+                        <a href="#initAuthentication"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initAuthentication()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/auth/auth.service.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialize authentication.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isAuth"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            isAuth
+                        </b>
+                        <a href="#isAuth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isAuth(val: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/auth/auth.service.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>val</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -501,8 +660,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/app/auth/auth.service.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/auth/auth.service.ts:59</a></div>
                 </td>
             </tr>
 
@@ -553,7 +712,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>    <code>Observable&lt;HttpResponse&lt;literal type&gt;&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -585,8 +744,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="133"
-                            class="link-to-prism">src/app/auth/auth.service.ts:133</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/auth/auth.service.ts:100</a></div>
                 </td>
             </tr>
 
@@ -599,6 +758,78 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resendVerificationToken"></a>
+                    <span class="name">
+                        <b>
+                            resendVerificationToken
+                        </b>
+                        <a href="#resendVerificationToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resendVerificationToken(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">src/app/auth/auth.service.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Resend verification token.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;literal type&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -628,8 +859,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="160"
-                            class="link-to-prism">src/app/auth/auth.service.ts:160</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/auth/auth.service.ts:121</a></div>
                 </td>
             </tr>
 
@@ -714,8 +945,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="151"
-                            class="link-to-prism">src/app/auth/auth.service.ts:151</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/auth/auth.service.ts:112</a></div>
                 </td>
             </tr>
 
@@ -779,15 +1010,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>signup(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, confirmPassword: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>signup(firstName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, confirmPassword: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">src/app/auth/auth.service.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/auth/auth.service.ts:48</a></div>
                 </td>
             </tr>
 
@@ -809,7 +1040,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>username</td>
+                                    <td>firstName</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -862,7 +1093,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#UserResponseType" target="_self" >Observable&lt;UserResponseType&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -893,14 +1124,12 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;boolean&gt;(
-    this.isAuthenticated
-  )</code>
+                            <i>Default value : </i><code>new BehaviorSubject&lt;boolean&gt;(this.isAuthenticated)</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/auth/auth.service.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/auth/auth.service.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -927,7 +1156,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/auth/auth.service.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/auth/auth.service.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -955,7 +1184,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/auth/auth.service.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/auth/auth.service.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -983,7 +1212,35 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/auth/auth.service.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/auth/auth.service.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="URL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            URL</b>
+                            <a href="#URL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.apiUrl + &#x27;/auth&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/auth/auth.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -997,120 +1254,88 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { HttpClient } from &#x27;@angular/common/http&#x27;;
-import { User } from &#x27;./user.model&#x27;;
-import { BehaviorSubject } from &#x27;rxjs&#x27;;
+import { HttpClient, HttpResponse } from &#x27;@angular/common/http&#x27;;
+import { IUser } from &#x27;./user.model&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { UIService } from &#x27;../shared/ui.service&#x27;;
 import { environment } from &#x27;../../environments/environment&#x27;;
+import { tap } from &#x27;rxjs/operators&#x27;;
 
-/**
- * API URL
- */
-const API_URL &#x3D; environment.apiUrl + &#x27;/user/&#x27;;
+type UserResponseType &#x3D; HttpResponse&lt;{ user: IUser }&gt;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class AuthService {
+  private readonly URL &#x3D; environment.apiUrl + &#x27;/auth&#x27;;
   private token: string;
   private isAuthenticated &#x3D; false;
   private tokenTimer: any;
-  private authStatusListener &#x3D; new BehaviorSubject&lt;boolean&gt;(
-    this.isAuthenticated
-  );
+  private authStatusListener &#x3D; new BehaviorSubject&lt;boolean&gt;(this.isAuthenticated);
 
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-    private uiService: UIService
-  ) {}
+  constructor(private http: HttpClient, private router: Router, private uiService: UIService) {}
 
   /**
    * Get token.
    */
-  getToken() {
+  getToken(): string {
     return this.token;
   }
 
   /**
    * Get authenticathion status.
    */
-  getIsAuth() {
+  getIsAuth(): boolean {
     return this.isAuthenticated;
   }
 
   /**
    * Listen to changes in authentication status.
    */
-  getAuthStatusListener() {
+  getAuthStatusListener(): Observable&lt;boolean&gt; {
     return this.authStatusListener.asObservable();
   }
 
   /**
    * Create user.
    */
-  signup(
-    username: string,
-    email: string,
-    password: string,
-    confirmPassword: string
-  ) {
-    this.uiService.loadingStateChanged.next(true);
-    const authData: User &#x3D; { username, email, password, confirmPassword };
-    this.http.post(&#x60;${API_URL}signup&#x60;, authData).subscribe(
-      response &#x3D;&gt; {
-        this.router.navigate([&#x27;/user/login&#x27;]);
-        this.uiService.loadingStateChanged.next(false);
-      },
-      error &#x3D;&gt; {
-        this.uiService.loadingStateChanged.next(false);
-      }
+  signup(firstName: string, email: string, password: string, confirmPassword: string): Observable&lt;UserResponseType&gt; {
+    return this.http.post&lt;{ user: IUser }&gt;(
+      &#x60;${this.URL}/signup&#x60;,
+      { firstName, email, password, confirmPassword },
+      { observe: &#x27;response&#x27; }
     );
   }
 
   /**
    * Log in user.
    */
-  login(email: string, password: string) {
-    this.uiService.loadingStateChanged.next(true);
-    const authData: User &#x3D; { email, password };
-    this.http
-      .post&lt;{ token: string; expiresIn: number }&gt;(&#x60;${API_URL}login&#x60;, authData)
-      .subscribe(
-        response &#x3D;&gt; {
-          const token &#x3D; response.token;
+  login(email: string, password: string): Observable&lt;HttpResponse&lt;{ token: string; expiresIn: number }&gt;&gt; {
+    return this.http
+      .post&lt;{ token: string; expiresIn: number }&gt;(&#x60;${this.URL}/login&#x60;, { email, password }, { observe: &#x27;response&#x27; })
+      .pipe(
+        tap(response &#x3D;&gt; {
+          const token &#x3D; response.body.token;
           if (token) {
-            const expiresInDuration &#x3D; response.expiresIn;
+            const expiresInDuration &#x3D; response.body.expiresIn;
             this.setAuthTimer(expiresInDuration);
             this.token &#x3D; token;
-            this.isAuthenticated &#x3D; true;
-            this.authStatusListener.next(true);
+            this.isAuth(true);
             const now &#x3D; new Date();
-            const expirationDate &#x3D; new Date(
-              now.getTime() + expiresInDuration * 1000
-            );
+            const expirationDate &#x3D; new Date(now.getTime() + expiresInDuration * 1000);
             this.saveAuthData(token, expirationDate);
-            this.uiService.showSnackBar(
-              &#x27;Logged in successfully!&#x27;,
-              null,
-              3000,
-              &#x27;bottom&#x27;
-            );
-            this.uiService.loadingStateChanged.next(true);
-            this.router.navigate([&#x27;/board&#x27;]);
+            this.uiService.showSnackBar(&#x27;Logged in successfully!&#x27;, null, 3000, &#x27;bottom&#x27;);
+            this.router.navigateByUrl(&#x27;/board&#x27;);
           }
-        },
-        error &#x3D;&gt; {
-          this.uiService.loadingStateChanged.next(false);
-        }
+        })
       );
   }
 
   /**
-   * Auto user authentication.
+   * Initialize authentication.
    */
-  autoAuthUser() {
+  initAuthentication() {
     const authInformation &#x3D; this.getAuthData();
     if (!authInformation) {
       return;
@@ -1119,9 +1344,8 @@ export class AuthService {
     const expiresIn &#x3D; authInformation.expirationDate.getTime() - now.getTime();
     if (expiresIn &gt; 0) {
       this.token &#x3D; authInformation.token;
-      this.isAuthenticated &#x3D; true;
+      this.isAuth(true);
       this.setAuthTimer(expiresIn / 1000);
-      this.authStatusListener.next(true);
     }
   }
 
@@ -1130,17 +1354,11 @@ export class AuthService {
    */
   logout() {
     this.token &#x3D; null;
-    this.isAuthenticated &#x3D; false;
-    this.authStatusListener.next(false);
+    this.isAuth(false);
     clearTimeout(this.tokenTimer);
     this.clearAuthData();
-    this.uiService.showSnackBar(
-      &#x27;Logged out successfully!&#x27;,
-      null,
-      3000,
-      &#x27;bottom&#x27;
-    );
-    this.router.navigate([&#x27;/&#x27;]);
+    this.uiService.showSnackBar(&#x27;Logged out successfully!&#x27;, null, 3000, &#x27;bottom&#x27;);
+    this.router.navigateByUrl(&#x27;/&#x27;);
   }
 
   /**
@@ -1171,7 +1389,7 @@ export class AuthService {
   /**
    * Get authentication data.
    */
-  private getAuthData() {
+  private getAuthData(): { token: string; expirationDate: Date } {
     const token &#x3D; localStorage.getItem(&#x27;token&#x27;);
     const expirationDate &#x3D; localStorage.getItem(&#x27;expiration&#x27;);
     if (!token || !expirationDate) {
@@ -1181,6 +1399,26 @@ export class AuthService {
       token,
       expirationDate: new Date(expirationDate)
     };
+  }
+
+  private isAuth(val: boolean) {
+    this.isAuthenticated &#x3D; val;
+    this.authStatusListener.next(val);
+  }
+
+  /**
+   * Get email verification token.
+   * @params token -&gt; expires in 30 min from creation.
+   */
+  getEmailVerificationToken(token: string): Observable&lt;{ token: { userId: string } }&gt; {
+    return this.http.get&lt;{ token: { userId: string } }&gt;(&#x60;${this.URL}/${token}&#x60;);
+  }
+
+  /**
+   * Resend verification token.
+   */
+  resendVerificationToken(email: string): Observable&lt;{ token: object }&gt; {
+    return this.http.post&lt;{ token: object }&gt;(&#x60;${this.URL}/token&#x60;, { email });
   }
 }
 </code></pre>

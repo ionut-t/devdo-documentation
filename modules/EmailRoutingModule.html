@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AuthRoutingModule</li>
+    <li>EmailRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/auth/auth-routing.module.ts</code>
+            <code>src/app/auth/email/email-routing.module.ts</code>
         </p>
 
 
@@ -72,20 +72,15 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import { SignupComponent } from &#x27;./signup/signup.component&#x27;;
-import { LoginComponent } from &#x27;./login/login.component&#x27;;
+import { VerifyEmailComponent } from &#x27;./verify-email/verify-email.component&#x27;;
 
-const routes: Routes &#x3D; [
-  { path: &#x27;signup&#x27;, component: SignupComponent },
-  { path: &#x27;login&#x27;, component: LoginComponent },
-  { path: &#x27;email&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./email/email.module&#x27;).then(m &#x3D;&gt; m.EmailModule)&quot; }
-];
+const routes: Routes &#x3D; [{ path: &#x27;verify/:token&#x27;, component: VerifyEmailComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AuthRoutingModule {}
+export class EmailRoutingModule {}
 </code></pre>
     </div>
 </div>
@@ -121,7 +116,7 @@ export class AuthRoutingModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EmailRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
