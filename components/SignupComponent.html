@@ -819,18 +819,18 @@ export class SignupComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-spinner *ngIf&#x3D;&quot;isLoading&quot;&gt;&lt;/mat-spinner&gt;
-&lt;form class&#x3D;&quot;user-form&quot; [formGroup]&#x3D;&quot;signupForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot; *ngIf&#x3D;&quot;!isLoading&quot;&gt;
-  &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+&lt;form class&#x3D;&quot;form user-form&quot; [formGroup]&#x3D;&quot;signupForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot; *ngIf&#x3D;&quot;!isLoading&quot;&gt;
+  &lt;mat-form-field&gt;
     &lt;input matInput type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;First Name&quot; formControlName&#x3D;&quot;firstName&quot; /&gt;
     &lt;mat-error *ngIf&#x3D;&quot;formCtrls.firstName.invalid&quot;&gt;{{ getFirstNameErrors() }}&lt;/mat-error&gt;
   &lt;/mat-form-field&gt;
 
-  &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+  &lt;mat-form-field&gt;
     &lt;input matInput type&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Enter your email&quot; formControlName&#x3D;&quot;email&quot; /&gt;
     &lt;mat-error *ngIf&#x3D;&quot;formCtrls.email.invalid&quot;&gt;{{ getEmailErrors() }}&lt;/mat-error&gt;
   &lt;/mat-form-field&gt;
 
-  &lt;mat-form-field class&#x3D;&quot;user-form-field&quot; hintLabel&#x3D;&quot;Password must contain minim 6 characters&quot;&gt;
+  &lt;mat-form-field hintLabel&#x3D;&quot;Password must contain minim 6 characters&quot;&gt;
     &lt;input
       matInput
       [type]&#x3D;&quot;hidePassword ? &#x27;password&#x27; : &#x27;text&#x27;&quot;
@@ -844,7 +844,7 @@ export class SignupComponent implements OnInit {
     &lt;mat-error *ngIf&#x3D;&quot;formCtrls.password.invalid&quot;&gt;{{ getPasswordErrors() }}&lt;/mat-error&gt;
   &lt;/mat-form-field&gt;
 
-  &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+  &lt;mat-form-field&gt;
     &lt;input
       matInput
       [type]&#x3D;&quot;hideConfirmPassword ? &#x27;password&#x27; : &#x27;text&#x27;&quot;
@@ -865,7 +865,10 @@ export class SignupComponent implements OnInit {
                 <p class="comment">
                     <code>./signup.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: flex;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -893,8 +896,8 @@ export class SignupComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner *ngIf="isLoading"></mat-spinner><form class="user-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">  <mat-form-field class="user-form-field">    <input matInput type="text" placeholder="First Name" formControlName="firstName" />    <mat-error *ngIf="formCtrls.firstName.invalid">{{ getFirstNameErrors() }}</mat-error>  </mat-form-field>  <mat-form-field class="user-form-field">    <input matInput type="email" placeholder="Enter your email" formControlName="email" />    <mat-error *ngIf="formCtrls.email.invalid">{{ getEmailErrors() }}</mat-error>  </mat-form-field>  <mat-form-field class="user-form-field" hintLabel="Password must contain minim 6 characters">    <input      matInput      [type]="hidePassword ? \'password\' : \'text\'"      placeholder="Enter a password"      formControlName="password"    />    <mat-icon matSuffix (click)="hidePassword = !hidePassword">      {{ hidePassword ? \'visibility_off\' : \'visibility\' }}    </mat-icon>    <mat-hint align="end">{{ formCtrls.password.value?.length || 0 }}/6</mat-hint>    <mat-error *ngIf="formCtrls.password.invalid">{{ getPasswordErrors() }}</mat-error>  </mat-form-field>  <mat-form-field class="user-form-field">    <input      matInput      [type]="hideConfirmPassword ? \'password\' : \'text\'"      placeholder="Confirm your password"      formControlName="confirmPassword"    />    <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">      {{ hideConfirmPassword ? \'visibility_off\' : \'visibility\' }}    </mat-icon>    <mat-error *ngIf="formCtrls.confirmPassword.invalid">{{ getConfirmPasswordErrors() }}</mat-error>  </mat-form-field>  <button mat-button type="submit" color="primary" [disabled]="signupForm.invalid">Sign Up</button></form></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+        var COMPONENT_TEMPLATE = '<div><mat-spinner *ngIf="isLoading"></mat-spinner><form class="form user-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">  <mat-form-field>    <input matInput type="text" placeholder="First Name" formControlName="firstName" />    <mat-error *ngIf="formCtrls.firstName.invalid">{{ getFirstNameErrors() }}</mat-error>  </mat-form-field>  <mat-form-field>    <input matInput type="email" placeholder="Enter your email" formControlName="email" />    <mat-error *ngIf="formCtrls.email.invalid">{{ getEmailErrors() }}</mat-error>  </mat-form-field>  <mat-form-field hintLabel="Password must contain minim 6 characters">    <input      matInput      [type]="hidePassword ? \'password\' : \'text\'"      placeholder="Enter a password"      formControlName="password"    />    <mat-icon matSuffix (click)="hidePassword = !hidePassword">      {{ hidePassword ? \'visibility_off\' : \'visibility\' }}    </mat-icon>    <mat-hint align="end">{{ formCtrls.password.value?.length || 0 }}/6</mat-hint>    <mat-error *ngIf="formCtrls.password.invalid">{{ getPasswordErrors() }}</mat-error>  </mat-form-field>  <mat-form-field>    <input      matInput      [type]="hideConfirmPassword ? \'password\' : \'text\'"      placeholder="Confirm your password"      formControlName="confirmPassword"    />    <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">      {{ hideConfirmPassword ? \'visibility_off\' : \'visibility\' }}    </mat-icon>    <mat-error *ngIf="formCtrls.confirmPassword.invalid">{{ getConfirmPasswordErrors() }}</mat-error>  </mat-form-field>  <button mat-button type="submit" color="primary" [disabled]="signupForm.invalid">Sign Up</button></form></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SignupComponent'};
 </script>

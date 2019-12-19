@@ -73,8 +73,12 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { VerifyEmailComponent } from &#x27;./verify-email/verify-email.component&#x27;;
+import { ResetPasswordComponent } from &#x27;./reset-password/reset-password.component&#x27;;
 
-const routes: Routes &#x3D; [{ path: &#x27;verify/:token&#x27;, component: VerifyEmailComponent }];
+const routes: Routes &#x3D; [
+  { path: &#x27;verify/:token&#x27;, component: VerifyEmailComponent },
+  { path: &#x27;reset-password/:token&#x27;, component: ResetPasswordComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

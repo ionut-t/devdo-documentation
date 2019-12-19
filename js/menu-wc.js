@@ -76,13 +76,17 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AuthModule.html" data-type="entity-link">AuthModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AuthModule-17ebb7fab0466e164c2c42525ce33702"' : 'data-target="#xs-components-links-module-AuthModule-17ebb7fab0466e164c2c42525ce33702"' }>
+                                            'data-target="#components-links-module-AuthModule-69d824ea6e2776735b8c8253e6cc5d7f"' : 'data-target="#xs-components-links-module-AuthModule-69d824ea6e2776735b8c8253e6cc5d7f"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AuthModule-17ebb7fab0466e164c2c42525ce33702"' :
-                                            'id="xs-components-links-module-AuthModule-17ebb7fab0466e164c2c42525ce33702"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AuthModule-69d824ea6e2776735b8c8253e6cc5d7f"' :
+                                            'id="xs-components-links-module-AuthModule-69d824ea6e2776735b8c8253e6cc5d7f"' }>
+                                            <li class="link">
+                                                <a href="components/ForgotPasswordComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ForgotPasswordComponent</a>
+                                            </li>
                                             <li class="link">
                                                 <a href="components/LoginComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">LoginComponent</a>
@@ -101,13 +105,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/BoardModule.html" data-type="entity-link">BoardModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' : 'data-target="#xs-components-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' }>
+                                            'data-target="#components-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' : 'data-target="#xs-components-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' :
-                                            'id="xs-components-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' :
+                                            'id="xs-components-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' }>
                                             <li class="link">
                                                 <a href="components/BoardComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BoardComponent</a>
@@ -128,13 +132,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' : 'data-target="#xs-pipes-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' }>
+                                            'data-target="#pipes-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' : 'data-target="#xs-pipes-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' }>
                                             <span class="icon ion-md-add"></span>
                                             <span>Pipes</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' :
-                                            'id="xs-pipes-links-module-BoardModule-784499291432ba28916fe7c8f1be2b4c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' :
+                                            'id="xs-pipes-links-module-BoardModule-1729b6d535a71c4d0096886c82e88dba"' }>
                                             <li class="link">
                                                 <a href="pipes/UppercaseFirstLetterPipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">UppercaseFirstLetterPipe</a>
@@ -189,13 +193,17 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/EmailModule.html" data-type="entity-link">EmailModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' : 'data-target="#xs-components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' }>
+                                            'data-target="#components-links-module-EmailModule-8f9a37cbd99941db12fca2a655cc46fb"' : 'data-target="#xs-components-links-module-EmailModule-8f9a37cbd99941db12fca2a655cc46fb"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' :
-                                            'id="xs-components-links-module-EmailModule-5bb2a86af6110433e1c71d111b1d8167"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EmailModule-8f9a37cbd99941db12fca2a655cc46fb"' :
+                                            'id="xs-components-links-module-EmailModule-8f9a37cbd99941db12fca2a655cc46fb"' }>
+                                            <li class="link">
+                                                <a href="components/ResetPasswordComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ResetPasswordComponent</a>
+                                            </li>
                                             <li class="link">
                                                 <a href="components/VerifyEmailComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">VerifyEmailComponent</a>
@@ -208,6 +216,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/MaterialModule.html" data-type="entity-link">MaterialModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ModalModule.html" data-type="entity-link">ModalModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ModalModule-5a90249fb360c8e695dd4ae149633a23"' : 'data-target="#xs-components-links-module-ModalModule-5a90249fb360c8e695dd4ae149633a23"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ModalModule-5a90249fb360c8e695dd4ae149633a23"' :
+                                            'id="xs-components-links-module-ModalModule-5a90249fb360c8e695dd4ae149633a23"' }>
+                                            <li class="link">
+                                                <a href="components/ModalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ModalComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/NavigationModule.html" data-type="entity-link">NavigationModule</a>
