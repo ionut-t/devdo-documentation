@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -122,7 +123,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/ui.service.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/ui.service.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -187,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/shared/ui.service.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/shared/ui.service.ts:19</a></div>
                 </td>
             </tr>
 
@@ -298,7 +299,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/ui.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/ui.service.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -313,10 +314,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { BehaviorSubject } from &#x27;rxjs&#x27;;
-import {
-  MatSnackBar,
-  MatSnackBarVerticalPosition
-} from &#x27;@angular/material/snack-bar&#x27;;
+import { MatSnackBar, MatSnackBarVerticalPosition } from &#x27;@angular/material/snack-bar&#x27;;
 
 /**
  * User interface service
@@ -332,12 +330,7 @@ export class UIService {
   /**
    * Display a snack bar to inform user about a change or error
    */
-  showSnackBar(
-    message: string,
-    action: any,
-    duration: number,
-    position: MatSnackBarVerticalPosition
-  ) {
+  showSnackBar(message: string, action: any, duration: number, position: MatSnackBarVerticalPosition) {
     this.snackBar.open(message, action, {
       duration,
       verticalPosition: position

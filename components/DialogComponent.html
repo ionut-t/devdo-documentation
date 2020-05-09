@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -90,7 +91,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./dialog.component.css</code></td>
+                <td class="col-md-9"><code>./dialog.component.scss</code></td>
             </tr>
 
 
@@ -253,7 +254,7 @@ interface DialogData {
 @Component({
   selector: &#x27;app-dialog&#x27;,
   templateUrl: &#x27;./dialog.component.html&#x27;,
-  styleUrls: [&#x27;./dialog.component.css&#x27;]
+  styleUrls: [&#x27;./dialog.component.scss&#x27;]
 })
 export class DialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
@@ -277,17 +278,16 @@ export class DialogComponent {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./dialog.component.css</code>
+                    <code>./dialog.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">:host {
-  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.mat-raised-button:not(:last-child) {
-  margin-right: 30px;
+  .mat-raised-button:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 </code></pre>
     </div>
@@ -318,7 +318,7 @@ export class DialogComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title>{{ data.title }}</h1><mat-dialog-content>{{ data.content }}</mat-dialog-content><mat-dialog-actions>  <button mat-raised-button color="warn" [mat-dialog-close]="true">    Confirm  </button>  <button mat-raised-button color="accent" [mat-dialog-close]="false">    Cancel  </button></mat-dialog-actions></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'app-create-project'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DialogComponent'};
 </script>

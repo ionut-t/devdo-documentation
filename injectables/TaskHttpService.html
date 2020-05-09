@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -56,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/board/tasks/task-http.service.ts</code>
+            <code>src/app/projects/tasks/task-http.service.ts</code>
         </p>
 
 
@@ -92,18 +93,23 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#createTask">createTask</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#deleteTask">deleteTask</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getTask">getTask</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getTasks">getTasks</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#updateTask">updateTask</a>
                             </li>
                         </ul>
@@ -129,7 +135,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/board/tasks/task-http.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/projects/tasks/task-http.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -191,6 +197,7 @@
                     <a name="createTask"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             createTask
                         </b>
                         <a href="#createTask"><span class="icon ion-ios-link"></span></a>
@@ -199,7 +206,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>createTask(task: <a href="../interfaces/ITask.html">ITask</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTask(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, projectId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, task: <a href="../interfaces/ITask.html">ITask</a>)</code>
                 </td>
             </tr>
 
@@ -207,7 +215,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/board/tasks/task-http.service.ts:25</a></div>
+                            class="link-to-prism">src/app/projects/tasks/task-http.service.ts:25</a></div>
                 </td>
             </tr>
 
@@ -229,6 +237,34 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>projectId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>task</td>
                                     <td>
@@ -269,6 +305,7 @@
                     <a name="deleteTask"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             deleteTask
                         </b>
                         <a href="#deleteTask"><span class="icon ion-ios-link"></span></a>
@@ -277,15 +314,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>deleteTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteTask(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/app/board/tasks/task-http.service.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/projects/tasks/task-http.service.ts:60</a></div>
                 </td>
             </tr>
 
@@ -307,6 +345,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>id</td>
                                     <td>
@@ -347,6 +399,7 @@
                     <a name="getTask"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             getTask
                         </b>
                         <a href="#getTask"><span class="icon ion-ios-link"></span></a>
@@ -355,15 +408,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTask(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/app/board/tasks/task-http.service.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/projects/tasks/task-http.service.ts:69</a></div>
                 </td>
             </tr>
 
@@ -385,6 +439,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>id</td>
                                     <td>
@@ -425,6 +493,7 @@
                     <a name="getTasks"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             getTasks
                         </b>
                         <a href="#getTasks"><span class="icon ion-ios-link"></span></a>
@@ -433,15 +502,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getTasks()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTasks(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/board/tasks/task-http.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/projects/tasks/task-http.service.ts:37</a></div>
                 </td>
             </tr>
 
@@ -451,6 +521,32 @@
                     <div class="io-description"><p>Create a new task.</p>
 </div>
 
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div>
                     </div>
                     <div class="io-description">
@@ -472,6 +568,7 @@
                     <a name="updateTask"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             updateTask
                         </b>
                         <a href="#updateTask"><span class="icon ion-ios-link"></span></a>
@@ -480,15 +577,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>updateTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, task: <a href="../interfaces/ITask.html">Partial<ITask></a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateTask(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, task: <a href="../interfaces/ITask.html">Partial<ITask></a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/board/tasks/task-http.service.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/projects/tasks/task-http.service.ts:51</a></div>
                 </td>
             </tr>
 
@@ -510,6 +608,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>id</td>
                                     <td>
@@ -581,12 +693,12 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>environment.apiUrl + &#x27;/tasks&#x27;</code>
+                            <i>Default value : </i><code>environment.apiUrl + &#x27;/projects&#x27;</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/board/tasks/task-http.service.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/projects/tasks/task-http.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -600,21 +712,21 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { HttpClient, HttpResponse } from &#x27;@angular/common/http&#x27;;
+import { HttpClient, HttpResponse, HttpParams } from &#x27;@angular/common/http&#x27;;
 import { ITask } from &#x27;./task.model&#x27;;
-import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
 import { UIService } from &#x27;../../shared/ui.service&#x27;;
 import { environment } from &#x27;../../../environments/environment&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
+import { IProject } from &#x27;../project.model&#x27;;
 
 type TaskResponseType &#x3D; HttpResponse&lt;{ task: ITask }&gt;;
-type TaskArrayResponseType &#x3D; HttpResponse&lt;{ tasks: ITask[] }&gt;;
+type TaskArrayResponseType &#x3D; HttpResponse&lt;{ tasks: ITask[]; project: IProject }&gt;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class TaskHttpService {
-  private readonly URL &#x3D; environment.apiUrl + &#x27;/tasks&#x27;;
+  private readonly URL &#x3D; environment.apiUrl + &#x27;/projects&#x27;;
 
   constructor(private http: HttpClient, private uiService: UIService) {}
 
@@ -623,8 +735,11 @@ export class TaskHttpService {
    * @param task -&gt; created task
    * @returns observable.
    */
-  createTask(task: ITask): Observable&lt;TaskResponseType&gt; {
-    return this.http.post&lt;{ task: ITask }&gt;(&#x60;${this.URL}&#x60;, task, { observe: &#x27;response&#x27; });
+  public createTask(projectUrl: string, projectId: string, task: ITask): Observable&lt;TaskResponseType&gt; {
+    return this.http.post&lt;{ task: ITask }&gt;(&#x60;${this.URL}/${projectUrl}/tasks&#x60;, task, {
+      observe: &#x27;response&#x27;,
+      params: new HttpParams().set(&#x27;projectId&#x27;, projectId)
+    });
   }
 
   /**
@@ -632,9 +747,12 @@ export class TaskHttpService {
    * @param task -&gt; created task.
    * @returns observable.
    */
-  getTasks(): Observable&lt;TaskArrayResponseType&gt; {
+  public getTasks(projectUrl: string): Observable&lt;TaskArrayResponseType&gt; {
     this.uiService.loadingStateChanged.next(true);
-    return this.http.get&lt;{ tasks: ITask[] }&gt;(this.URL, { observe: &#x27;response&#x27; });
+
+    return this.http.get&lt;{ tasks: ITask[]; project: IProject }&gt;(&#x60;${this.URL}/${projectUrl}/tasks&#x60;, {
+      observe: &#x27;response&#x27;
+    });
   }
 
   /**
@@ -643,8 +761,8 @@ export class TaskHttpService {
    * @param task -&gt; Partial task.
    * @returns observable.
    */
-  updateTask(id: string, task: Partial&lt;ITask&gt;): Observable&lt;TaskResponseType&gt; {
-    return this.http.put&lt;{ task: ITask }&gt;(&#x60;${this.URL}/${id}&#x60;, task, { observe: &#x27;response&#x27; });
+  public updateTask(projectUrl: string, id: string, task: Partial&lt;ITask&gt;): Observable&lt;TaskResponseType&gt; {
+    return this.http.put&lt;{ task: ITask }&gt;(&#x60;${this.URL}/${projectUrl}/tasks/${id}&#x60;, task, { observe: &#x27;response&#x27; });
   }
 
   /**
@@ -652,8 +770,8 @@ export class TaskHttpService {
    * @param id -&gt; task id.
    * @returns observable.
    */
-  deleteTask(id: string): Observable&lt;HttpResponse&lt;null&gt;&gt; {
-    return this.http.delete&lt;null&gt;(&#x60;${this.URL}/${id}&#x60;, { observe: &#x27;response&#x27; });
+  public deleteTask(projectUrl: string, id: string): Observable&lt;HttpResponse&lt;null&gt;&gt; {
+    return this.http.delete&lt;null&gt;(&#x60;${this.URL}/${projectUrl}/tasks/${id}&#x60;, { observe: &#x27;response&#x27; });
   }
 
   /**
@@ -661,8 +779,8 @@ export class TaskHttpService {
    * @param id -&gt; task id.
    * @returns observable.
    */
-  getTask(id: string): Observable&lt;TaskResponseType&gt; {
-    return this.http.get&lt;{ task: ITask }&gt;(&#x60;${this.URL}/${id}&#x60;, { observe: &#x27;response&#x27; });
+  public getTask(projectUrl: string, id: string): Observable&lt;TaskResponseType&gt; {
+    return this.http.get&lt;{ task: ITask }&gt;(&#x60;${this.URL}/${projectUrl}/tasks/${id}&#x60;, { observe: &#x27;response&#x27; });
   }
 }
 </code></pre>

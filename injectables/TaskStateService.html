@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -56,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/board/tasks/task-state.service.ts</code>
+            <code>src/app/projects/tasks/task-state.service.ts</code>
         </p>
 
 
@@ -75,25 +76,24 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#project">project</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#taskChanged">taskChanged</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#taskIdListener">taskIdListener</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#taskIdListener$">taskIdListener$</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#taskListener">taskListener</a>
-                            </li>
-                            <li>
-                                <a href="#taskListener$">taskListener$</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#tasksListListener">tasksListListener</a>
-                            </li>
-                            <li>
-                                <a href="#tasksListListener$">tasksListListener$</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#taskOnChange$">taskOnChange$</a>
                             </li>
                         </ul>
                     </td>
@@ -108,16 +108,20 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getMappedTask">getMappedTask</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getMappedTasks">getMappedTasks</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getTaskId">getTaskId</a>
                             </li>
                             <li>
-                                <a href="#reloadTasks">reloadTasks</a>
-                            </li>
-                            <li>
-                                <a href="#updateTasksList">updateTasksList</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#taskChange">taskChange</a>
                             </li>
                         </ul>
                     </td>
@@ -142,7 +146,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/board/tasks/task-state.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -192,6 +196,7 @@
                     <a name="getMappedTask"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             getMappedTask
                         </b>
                         <a href="#getMappedTask"><span class="icon ion-ios-link"></span></a>
@@ -200,7 +205,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getMappedTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMappedTask(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -208,7 +214,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/board/tasks/task-state.service.ts:25</a></div>
+                            class="link-to-prism">src/app/projects/tasks/task-state.service.ts:25</a></div>
                 </td>
             </tr>
 
@@ -230,6 +236,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>id</td>
                                     <td>
@@ -267,9 +287,82 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getMappedTasks"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getMappedTasks
+                        </b>
+                        <a href="#getMappedTasks"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMappedTasks(projectUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/projects/tasks/task-state.service.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>projectUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/ITask.html" target="_self" >Observable&lt;ITask[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getTaskId"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             getTaskId
                         </b>
                         <a href="#getTaskId"><span class="icon ion-ios-link"></span></a>
@@ -278,15 +371,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getTaskId(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTaskId(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app/board/tasks/task-state.service.ts:58</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/projects/tasks/task-state.service.ts:65</a></div>
                 </td>
             </tr>
 
@@ -344,103 +438,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="reloadTasks"></a>
+                    <a name="taskChange"></a>
                     <span class="name">
                         <b>
-                            reloadTasks
+                            <span class="modifier">Public</span>
+                            taskChange
                         </b>
-                        <a href="#reloadTasks"><span class="icon ion-ios-link"></span></a>
+                        <a href="#taskChange"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>reloadTasks(tasks: <a href="../interfaces/ITask.html">ITask[]</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>taskChange(task: <a href="../interfaces/ITask.html">ITask</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/board/tasks/task-state.service.ts:50</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Reload tasks.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>tasks</td>
-                                    <td>
-                                                <code><a href="../interfaces/ITask.html" target="_self" >ITask[]</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>-&gt; tasks list.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateTasksList"></a>
-                    <span class="name">
-                        <b>
-                            updateTasksList
-                        </b>
-                        <a href="#updateTasksList"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>updateTasksList(task: <a href="../interfaces/ITask.html">ITask</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/board/tasks/task-state.service.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/projects/tasks/task-state.service.ts:57</a></div>
                 </td>
             </tr>
 
@@ -504,6 +523,61 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="project"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            project</b>
+                            <a href="#project"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IProject.html" target="_self" >IProject</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taskChanged"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            taskChanged</b>
+                            <a href="#taskChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject&lt;ITask | null&gt;(null)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="taskIdListener"></a>
                         <span class="name">
                             <b>
@@ -520,7 +594,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/board/tasks/task-state.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -534,6 +608,7 @@
                         <a name="taskIdListener$"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Public</span>
                             taskIdListener$</b>
                             <a href="#taskIdListener$"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -546,7 +621,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/board/tasks/task-state.service.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -557,102 +632,23 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="taskListener"></a>
+                        <a name="taskOnChange$"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
-                            taskListener</b>
-                            <a href="#taskListener"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Public</span>
+                            taskOnChange$</b>
+                            <a href="#taskOnChange$"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;ITask&gt;(null)</code>
+                            <i>Default value : </i><code>this.taskChanged.asObservable()</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/board/tasks/task-state.service.ts:11</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="taskListener$"></a>
-                        <span class="name">
-                            <b>
-                            taskListener$</b>
-                            <a href="#taskListener$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>this.taskListener.asObservable()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/board/tasks/task-state.service.ts:12</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="tasksListListener"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            tasksListListener</b>
-                            <a href="#tasksListListener"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;ITask[]&gt;(null)</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/board/tasks/task-state.service.ts:13</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="tasksListListener$"></a>
-                        <span class="name">
-                            <b>
-                            tasksListListener$</b>
-                            <a href="#tasksListListener$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>this.tasksListListener.asObservable()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/board/tasks/task-state.service.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/projects/tasks/task-state.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -667,20 +663,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
+import { map, tap } from &#x27;rxjs/operators&#x27;;
 import { TaskHttpService } from &#x27;./task-http.service&#x27;;
 import { ITask } from &#x27;./task.model&#x27;;
+import { IProject } from &#x27;../project.model&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class TaskStateService {
-  private taskListener &#x3D; new BehaviorSubject&lt;ITask&gt;(null);
-  taskListener$ &#x3D; this.taskListener.asObservable();
-  private tasksListListener &#x3D; new BehaviorSubject&lt;ITask[]&gt;(null);
-  tasksListListener$ &#x3D; this.tasksListListener.asObservable();
+  private taskChanged &#x3D; new BehaviorSubject&lt;ITask | null&gt;(null);
+  public taskOnChange$ &#x3D; this.taskChanged.asObservable();
   private taskIdListener &#x3D; new BehaviorSubject&lt;string&gt;(null);
-  taskIdListener$ &#x3D; this.taskIdListener.asObservable();
+  public taskIdListener$ &#x3D; this.taskIdListener.asObservable();
+  public project: IProject;
 
   constructor(private taskHttpService: TaskHttpService) {}
 
@@ -689,8 +685,8 @@ export class TaskStateService {
    * @param id -&gt; task id.
    * @returns observable.
    */
-  getMappedTask(id: string): Observable&lt;ITask&gt; {
-    return this.taskHttpService.getTask(id).pipe(
+  public getMappedTask(projectUrl: string, id: string): Observable&lt;ITask&gt; {
+    return this.taskHttpService.getTask(projectUrl, id).pipe(
       map((res: any) &#x3D;&gt; {
         return {
           id: res.body._id,
@@ -702,27 +698,34 @@ export class TaskStateService {
     );
   }
 
+  public getMappedTasks(projectUrl: string): Observable&lt;ITask[]&gt; {
+    return this.taskHttpService.getTasks(projectUrl).pipe(
+      tap(res &#x3D;&gt; (this.project &#x3D; res.body.project)),
+      map(res &#x3D;&gt;
+        res.body.tasks.map((task: any) &#x3D;&gt; ({
+          id: task._id,
+          title: task.title,
+          description: task.description,
+          status: task.status,
+          creator: task.creator
+        }))
+      )
+    );
+  }
+
   /**
    * Update tasks list.
    * @param task -&gt; created task.
    */
-  updateTasksList(task: ITask) {
-    this.taskListener.next(task);
-  }
-
-  /**
-   * Reload tasks.
-   * @param tasks -&gt; tasks list.
-   */
-  reloadTasks(tasks: ITask[]) {
-    this.tasksListListener.next(tasks);
+  public taskChange(task: ITask): void {
+    this.taskChanged.next(task);
   }
 
   /**
    * Get task id.
    * @param id -&gt; task id.
    */
-  getTaskId(id: string) {
+  public getTaskId(id: string): void {
     this.taskIdListener.next(id);
   }
 }

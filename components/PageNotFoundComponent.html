@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -97,7 +98,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./page-not-found.component.css</code></td>
+                <td class="col-md-9"><code>./page-not-found.component.scss</code></td>
             </tr>
 
 
@@ -156,12 +157,10 @@
 @Component({
   selector: &#x27;app-page-not-found&#x27;,
   templateUrl: &#x27;./page-not-found.component.html&#x27;,
-  styleUrls: [&#x27;./page-not-found.component.css&#x27;]
+  styleUrls: [&#x27;./page-not-found.component.scss&#x27;]
 })
 export class PageNotFoundComponent {
-
-  constructor() { }
-
+  constructor() {}
 }
 </code></pre>
     </div>
@@ -170,8 +169,8 @@ export class PageNotFoundComponent {
         <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;page-not-found&quot;&gt;
   &lt;div class&#x3D;&quot;container&quot;&gt;
     &lt;h1 class&#x3D;&quot;heading&quot;&gt;404 Error&lt;/h1&gt;
-    &lt;p&gt;The page you are looking for does not exist or have been deleted.&lt;/p&gt;
-    &lt;p&gt;Probably you got lost and you need to &lt;a routerLink&#x3D;&quot;&quot;&gt;go home&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;The page you are looking for does not exist or has been deleted.&lt;/p&gt;
+    &lt;p&gt;Probably you got lost and you need to &lt;a mat-button color&#x3D;&quot;primary&quot; routerLink&#x3D;&quot;&quot;&gt;go home&lt;/a&gt;.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/section&gt;
 </code></pre>
@@ -179,27 +178,29 @@ export class PageNotFoundComponent {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./page-not-found.component.css</code>
+                    <code>./page-not-found.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.page-not-found {
   position: relative;
-  height: calc(100% - 64px);
-}
+  height: calc(100vh - 64px - 64px);
 
-.heading {
-  font-size: 450%;
-}
+  @media only screen and (max-width: 599px) {
+    height: calc(100vh - 56px - 56px);
+  }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-@media only screen and (max-width: 599px) {
-  .page-not-found {
-    height: calc(100% - 56px);
+    .heading {
+      font-size: 450%;
+    }
+
+    .mat-button {
+      padding: 0;
+    }
   }
 }
 </code></pre>
@@ -230,8 +231,8 @@ export class PageNotFoundComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="page-not-found">  <div class="container">    <h1 class="heading">404 Error</h1>    <p>The page you are looking for does not exist or have been deleted.</p>    <p>Probably you got lost and you need to <a routerLink="">go home</a>.</p>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+        var COMPONENT_TEMPLATE = '<div><section class="page-not-found">  <div class="container">    <h1 class="heading">404 Error</h1>    <p>The page you are looking for does not exist or has been deleted.</p>    <p>Probably you got lost and you need to <a mat-button color="primary" routerLink="">go home</a>.</p>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'app-create-project'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PageNotFoundComponent'};
 </script>

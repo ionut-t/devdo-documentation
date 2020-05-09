@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -87,6 +88,7 @@ import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
 import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;;
 import { MatCardModule } from &#x27;@angular/material/card&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
+import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 
 @NgModule({
   exports: [
@@ -105,7 +107,8 @@ import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
     MatTooltipModule,
     MatSlideToggleModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule {}

@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -58,10 +59,31 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                            <a href="#context" title="src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#displayFormErrors" title="src/app/shared/form-errors.utils.ts"><b>displayFormErrors</b>&nbsp;&nbsp;&nbsp;(src/.../form-errors.utils.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#HEROKU_URL" title="credential.ts"><b>HEROKU_URL</b>&nbsp;&nbsp;&nbsp;(credential.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#routerAnimation" title="src/app/animations/router.animation.ts"><b>routerAnimation</b>&nbsp;&nbsp;&nbsp;(src/.../router.animation.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#slideToTheLeft" title="src/app/animations/router.animation.ts"><b>slideToTheLeft</b>&nbsp;&nbsp;&nbsp;(src/.../router.animation.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#slideToTheRight" title="src/app/animations/router.animation.ts"><b>slideToTheRight</b>&nbsp;&nbsp;&nbsp;(src/.../router.animation.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -70,6 +92,149 @@
     </table>
 </section>
 
+    <h3>src/test.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <span class="name">
+                            <b>
+                            context</b>
+                            <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="require"></a>
+                        <span class="name">
+                            <b>
+                            require</b>
+                            <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/shared/form-errors.utils.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayFormErrors"></a>
+                        <span class="name">
+                            <b>
+                            displayFormErrors</b>
+                            <a href="#displayFormErrors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+  control: AbstractControl,
+  placeholder: string,
+  minLength?: number,
+  maxLength?: number
+): string &#x3D;&gt; {
+  let errorMessage &#x3D; &#x27;&#x27;;
+
+  switch (control.invalid) {
+    case control.hasError(&#x27;required&#x27;):
+      errorMessage &#x3D; &#x60;${placeholder} is required&#x60;;
+      break;
+
+    case control.hasError(&#x27;email&#x27;):
+      errorMessage &#x3D; &#x60;${placeholder} needs to be a valid email&#x60;;
+      break;
+
+    case control.hasError(&#x27;minlength&#x27;):
+      errorMessage &#x3D; &#x60;${placeholder} needs to have at least ${minLength} characters&#x60;;
+      break;
+
+    case control.hasError(&#x27;maxlength&#x27;):
+      errorMessage &#x3D; &#x60;${placeholder} needs to have maximum ${maxLength} characters&#x60;;
+      break;
+
+    case control.hasError(&#x27;mustMatch&#x27;):
+      errorMessage &#x3D; &#x60;Passwords must match&#x60;;
+      break;
+
+    default:
+      break;
+  }
+
+  return errorMessage;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Helper function for displaying the form controls errors.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: false,
+  apiUrl: &#x27;http://localhost:3000/api/v2&#x27;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -103,32 +268,154 @@
             </tbody>
         </table>
 </section>
-    <h3>src/environments/environment.ts</h3>
+    <h3>credential.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="environment"></a>
+                        <a name="HEROKU_URL"></a>
                         <span class="name">
                             <b>
-                            environment</b>
-                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                            HEROKU_URL</b>
+                            <a href="#HEROKU_URL"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>{
-  production: false,
-  apiUrl: &#x27;http://localhost:3000/api/v2&#x27;
-}</code>
+                            <i>Default value : </i><code>&#x27;https://devdo.herokuapp.com/api/v2&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/animations/router.animation.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="routerAnimation"></a>
+                        <span class="name">
+                            <b>
+                            routerAnimation</b>
+                            <a href="#routerAnimation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/animations/AnimationTriggerMetadata" target="_blank" >AnimationTriggerMetadata</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>trigger(&#x27;routerAnimation&#x27;, [
+  transition(&#x27;* &#x3D;&gt; isLeft&#x27;, slideToTheLeft),
+  transition(&#x27;* &#x3D;&gt; isRight&#x27;, slideToTheRight),
+  transition(&#x27;isRight &#x3D;&gt; *&#x27;, slideToTheLeft),
+  transition(&#x27;isLeft &#x3D;&gt; *&#x27;, slideToTheRight)
+])</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slideToTheLeft"></a>
+                        <span class="name">
+                            <b>
+                            slideToTheLeft</b>
+                            <a href="#slideToTheLeft"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  query(
+    &#x27;:enter, :leave&#x27;,
+    [
+      style({
+        position: &#x27;absolute&#x27;,
+        top: document.body.clientWidth &lt;&#x3D; 599 ? &#x27;56px&#x27; : &#x27;64px&#x27;,
+        left: 0,
+        width: &#x27;100%&#x27;
+      })
+    ],
+    { optional: true }
+  ),
+  query(&#x27;:enter&#x27;, [style({ left: &#x27;-100%&#x27; })]),
+  group([
+    query(&#x27;:leave&#x27;, [animate(&#x27;.6s ease&#x27;, style({ left: &#x27;100%&#x27; }))], { optional: true }),
+    query(&#x27;:enter&#x27;, [animate(&#x27;.6s ease&#x27;, style({ left: &#x27;0%&#x27; }))])
+  ])
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slideToTheRight"></a>
+                        <span class="name">
+                            <b>
+                            slideToTheRight</b>
+                            <a href="#slideToTheRight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  query(
+    &#x27;:enter, :leave&#x27;,
+    [
+      style({
+        position: &#x27;absolute&#x27;,
+        top: document.body.clientWidth &lt;&#x3D; 599 ? &#x27;56px&#x27; : &#x27;64px&#x27;,
+        right: 0,
+        width: &#x27;100%&#x27;
+      })
+    ],
+    { optional: true }
+  ),
+  query(&#x27;:enter&#x27;, [style({ right: &#x27;-100%&#x27; })]),
+  group([
+    query(&#x27;:leave&#x27;, [animate(&#x27;.6s ease&#x27;, style({ right: &#x27;100%&#x27; }))], { optional: true }),
+    query(&#x27;:enter&#x27;, [animate(&#x27;.6s ease&#x27;, style({ right: &#x27;0%&#x27; }))])
+  ])
+]</code>
                         </td>
                     </tr>
 

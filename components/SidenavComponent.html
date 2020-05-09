@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -96,7 +97,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./sidenav.component.css</code></td>
+                <td class="col-md-9"><code>./sidenav.component.scss</code></td>
             </tr>
 
 
@@ -397,7 +398,7 @@ Check if user is logged in.</p>
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(&#x27;drawer&#x27;, {static: false})<br />
+                                @ViewChild(&#x27;drawer&#x27;)<br />
                             </code>
                         </td>
                     </tr>
@@ -506,13 +507,13 @@ import { MatSidenav } from &#x27;@angular/material/sidenav&#x27;;
 @Component({
   selector: &#x27;app-sidenav&#x27;,
   templateUrl: &#x27;./sidenav.component.html&#x27;,
-  styleUrls: [&#x27;./sidenav.component.css&#x27;]
+  styleUrls: [&#x27;./sidenav.component.scss&#x27;]
 })
 export class SidenavComponent implements OnInit {
   isDarkTheme &#x3D; false;
   isHandset$: Observable&lt;boolean&gt;;
   isLoggedIn$: Observable&lt;boolean&gt;;
-  @ViewChild(&#x27;drawer&#x27;, { static: false }) drawer: MatSidenav;
+  @ViewChild(&#x27;drawer&#x27;) drawer: MatSidenav;
 
   constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService) {}
 
@@ -560,12 +561,12 @@ export class SidenavComponent implements OnInit {
     &lt;mat-nav-list&gt;
       &lt;a
         mat-list-item
-        routerLink&#x3D;&quot;/board&quot;
+        routerLink&#x3D;&quot;/projects&quot;
         routerLinkActive&#x3D;&quot;active&quot;
         *ngIf&#x3D;&quot;isLoggedIn$ | async&quot;
         (click)&#x3D;&quot;drawer.close()&quot;
       &gt;
-        My Board
+        My Projects
       &lt;/a&gt;
       &lt;a
         mat-list-item
@@ -590,7 +591,10 @@ export class SidenavComponent implements OnInit {
   &lt;/mat-sidenav&gt;
   &lt;mat-sidenav-content&gt;
     &lt;app-topnav (toggleSidenav)&#x3D;&quot;drawer.toggle()&quot; (toggleTheme)&#x3D;&quot;onToggleTheme()&quot;&gt;&lt;/app-topnav&gt;
-    &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;div class&#x3D;&quot;content&quot;&gt;
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+    &lt;app-footer&gt;&lt;/app-footer&gt;
   &lt;/mat-sidenav-content&gt;
 &lt;/mat-sidenav-container&gt;
 </code></pre>
@@ -598,14 +602,23 @@ export class SidenavComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./sidenav.component.css</code>
+                    <code>./sidenav.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.sidenav-container {
   height: 100%;
-}
 
-.sidenav {
-  width: 200px;
+  .sidenav {
+    width: 200px;
+  }
+
+  .mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      flex: 1 1 0;
+    }
+  }
 }
 </code></pre>
     </div>
@@ -635,8 +648,8 @@ export class SidenavComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{ \'dark-theme\': isDarkTheme }">  <mat-sidenav    #drawer    class="sidenav"    fixedInViewport="true"    [attr.role]="(isHandset$ | async) ? \'dialog\' : \'navigation\'"    mode="over"  >    <mat-toolbar color="primary" class="mat-elevation-z2">Menu</mat-toolbar>    <mat-nav-list>      <a        mat-list-item        routerLink="/board"        routerLinkActive="active"        *ngIf="isLoggedIn$ | async"        (click)="drawer.close()"      >        My Board      </a>      <a        mat-list-item        routerLink="/authentication/signup"        routerLinkActive="active"        *ngIf="!(isLoggedIn$ | async)"        (click)="drawer.close()"      >        Sign Up      </a>      <a        mat-list-item        routerLink="/authentication/login"        routerLinkActive="active"        *ngIf="!(isLoggedIn$ | async)"        (click)="drawer.close()"      >        Log In      </a>      <a mat-list-item *ngIf="isLoggedIn$ | async" (click)="onLogout()">Log Out</a>    </mat-nav-list>  </mat-sidenav>  <mat-sidenav-content>    <app-topnav (toggleSidenav)="drawer.toggle()" (toggleTheme)="onToggleTheme()"></app-topnav>    <ng-content></ng-content>  </mat-sidenav-content></mat-sidenav-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{ \'dark-theme\': isDarkTheme }">  <mat-sidenav    #drawer    class="sidenav"    fixedInViewport="true"    [attr.role]="(isHandset$ | async) ? \'dialog\' : \'navigation\'"    mode="over"  >    <mat-toolbar color="primary" class="mat-elevation-z2">Menu</mat-toolbar>    <mat-nav-list>      <a        mat-list-item        routerLink="/projects"        routerLinkActive="active"        *ngIf="isLoggedIn$ | async"        (click)="drawer.close()"      >        My Projects      </a>      <a        mat-list-item        routerLink="/authentication/signup"        routerLinkActive="active"        *ngIf="!(isLoggedIn$ | async)"        (click)="drawer.close()"      >        Sign Up      </a>      <a        mat-list-item        routerLink="/authentication/login"        routerLinkActive="active"        *ngIf="!(isLoggedIn$ | async)"        (click)="drawer.close()"      >        Log In      </a>      <a mat-list-item *ngIf="isLoggedIn$ | async" (click)="onLogout()">Log Out</a>    </mat-nav-list>  </mat-sidenav>  <mat-sidenav-content>    <app-topnav (toggleSidenav)="drawer.toggle()" (toggleTheme)="onToggleTheme()"></app-topnav>    <div class="content">      <ng-content></ng-content>    </div>    <app-footer></app-footer>  </mat-sidenav-content></mat-sidenav-container></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'app-create-project'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidenavComponent'};
 </script>

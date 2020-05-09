@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -77,10 +78,10 @@ import { AuthGuard } from &#x27;./auth/auth.guard&#x27;;
 import { PageNotFoundComponent } from &#x27;./core/page-not-found/page-not-found.component&#x27;;
 
 const routes: Routes &#x3D; [
-  { path: &#x27;&#x27;, component: HomeComponent },
+  { path: &#x27;&#x27;, component: HomeComponent, data: { animation: &#x27;isLeft&#x27; } },
   {
-    path: &#x27;board&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./board/board.module&#x27;).then(m &#x3D;&gt; m.BoardModule)&quot;,
+    path: &#x27;projects&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./projects/projects.module&#x27;).then(m &#x3D;&gt; m.ProjectsModule)&quot;,
     canLoad: [AuthGuard]
   },
   {

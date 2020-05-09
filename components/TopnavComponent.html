@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -96,7 +97,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./topnav.component.css</code></td>
+                <td class="col-md-9"><code>./topnav.component.scss</code></td>
             </tr>
 
 
@@ -541,7 +542,7 @@ import { AuthService } from &#x27;src/app/auth/auth.service&#x27;;
 @Component({
   selector: &#x27;app-topnav&#x27;,
   templateUrl: &#x27;./topnav.component.html&#x27;,
-  styleUrls: [&#x27;./topnav.component.css&#x27;]
+  styleUrls: [&#x27;./topnav.component.scss&#x27;]
 })
 export class TopnavComponent implements OnInit {
   isHandset$: Observable&lt;boolean&gt;;
@@ -601,8 +602,8 @@ export class TopnavComponent implements OnInit {
   &lt;span&gt;&lt;a mat-button class&#x3D;&quot;app-title&quot; routerLink&#x3D;&quot;&quot;&gt;devDo&lt;/a&gt;&lt;/span&gt;
   &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;/div&gt;
   &lt;mat-nav-list class&#x3D;&quot;main-navigation&quot; *ngIf&#x3D;&quot;!(isHandset$ | async)&quot;&gt;
-    &lt;a mat-list-item routerLink&#x3D;&quot;/board&quot; routerLinkActive&#x3D;&quot;active&quot; *ngIf&#x3D;&quot;isLoggedIn$ | async&quot;&gt;
-      My Board
+    &lt;a mat-list-item routerLink&#x3D;&quot;/projects&quot; routerLinkActive&#x3D;&quot;active&quot; *ngIf&#x3D;&quot;isLoggedIn$ | async&quot;&gt;
+      My Projects
     &lt;/a&gt;
     &lt;a mat-list-item routerLink&#x3D;&quot;/authentication/signup&quot; routerLinkActive&#x3D;&quot;active&quot; *ngIf&#x3D;&quot;!(isLoggedIn$ | async)&quot;&gt;
       Sign Up
@@ -621,30 +622,30 @@ export class TopnavComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./topnav.component.css</code>
+                    <code>./topnav.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 99;
-}
 
-.main-navigation {
-  display: flex;
-  align-self: baseline;
-}
+  .main-navigation {
+    display: flex;
+    align-self: baseline;
+  }
 
-.spacer {
-  flex: 1 1 0;
-}
+  .spacer {
+    flex: 1 1 0;
+  }
 
-.app-title {
-  font-size: 24px;
-  font-weight: 400;
-}
+  .app-title {
+    font-size: 24px;
+    font-weight: 400;
+  }
 
-.mat-nav-list .mat-list-item {
-  color: #fff;
+  .mat-nav-list .mat-list-item {
+    color: #fff;
+  }
 }
 </code></pre>
     </div>
@@ -674,8 +675,8 @@ export class TopnavComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="mat-elevation-z8">  <button    type="button"    aria-label="Toggle sidenav"    mat-icon-button    (click)="onToggleSidenav()"    *ngIf="isHandset$ | async"  >    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>  </button>  <span><a mat-button class="app-title" routerLink="">devDo</a></span>  <div class="spacer"></div>  <mat-nav-list class="main-navigation" *ngIf="!(isHandset$ | async)">    <a mat-list-item routerLink="/board" routerLinkActive="active" *ngIf="isLoggedIn$ | async">      My Board    </a>    <a mat-list-item routerLink="/authentication/signup" routerLinkActive="active" *ngIf="!(isLoggedIn$ | async)">      Sign Up    </a>    <a mat-list-item routerLink="/authentication/login" routerLinkActive="active" *ngIf="!(isLoggedIn$ | async)">      Log In    </a>    <a mat-list-item *ngIf="isLoggedIn$ | async" (click)="onLogout()">      Log Out    </a>  </mat-nav-list>  <mat-slide-toggle matTooltip="Change theme" (change)="onToggleTheme()"></mat-slide-toggle></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="mat-elevation-z8">  <button    type="button"    aria-label="Toggle sidenav"    mat-icon-button    (click)="onToggleSidenav()"    *ngIf="isHandset$ | async"  >    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>  </button>  <span><a mat-button class="app-title" routerLink="">devDo</a></span>  <div class="spacer"></div>  <mat-nav-list class="main-navigation" *ngIf="!(isHandset$ | async)">    <a mat-list-item routerLink="/projects" routerLinkActive="active" *ngIf="isLoggedIn$ | async">      My Projects    </a>    <a mat-list-item routerLink="/authentication/signup" routerLinkActive="active" *ngIf="!(isLoggedIn$ | async)">      Sign Up    </a>    <a mat-list-item routerLink="/authentication/login" routerLinkActive="active" *ngIf="!(isLoggedIn$ | async)">      Log In    </a>    <a mat-list-item *ngIf="isLoggedIn$ | async" (click)="onLogout()">      Log Out    </a>  </mat-nav-list>  <mat-slide-toggle matTooltip="Change theme" (change)="onToggleTheme()"></mat-slide-toggle></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'app-create-project'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TopnavComponent'};
 </script>

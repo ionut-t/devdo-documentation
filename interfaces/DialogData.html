@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -169,7 +170,7 @@ interface DialogData {
 @Component({
   selector: &#x27;app-dialog&#x27;,
   templateUrl: &#x27;./dialog.component.html&#x27;,
-  styleUrls: [&#x27;./dialog.component.css&#x27;]
+  styleUrls: [&#x27;./dialog.component.scss&#x27;]
 })
 export class DialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}

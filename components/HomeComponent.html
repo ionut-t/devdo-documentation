@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
@@ -104,7 +105,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./home.component.css</code></td>
+                <td class="col-md-9"><code>./home.component.scss</code></td>
             </tr>
 
 
@@ -445,7 +446,7 @@ import { AuthService } from &#x27;src/app/auth/auth.service&#x27;;
 @Component({
   selector: &#x27;app-home&#x27;,
   templateUrl: &#x27;./home.component.html&#x27;,
-  styleUrls: [&#x27;./home.component.css&#x27;]
+  styleUrls: [&#x27;./home.component.scss&#x27;]
 })
 export class HomeComponent implements OnInit, OnDestroy {
   isAuth &#x3D; false;
@@ -483,16 +484,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   &lt;div class&#x3D;&quot;overlay&quot;&gt;
     &lt;div class&#x3D;&quot;home__cta&quot;&gt;
       &lt;p&gt;
-        devDo helps you to keep track of your project progress and never miss a
-        deadline.
+        devDo helps you to keep track of your project progress and never miss a deadline.
       &lt;/p&gt;
-      &lt;button
-        mat-raised-button
-        class&#x3D;&quot;mat-elevation-z24&quot;
-        color&#x3D;&quot;primary&quot;
-        (click)&#x3D;&quot;onSignUp()&quot;
-        *ngIf&#x3D;&quot;!isAuth&quot;
-      &gt;
+      &lt;button mat-raised-button class&#x3D;&quot;mat-elevation-z24&quot; color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSignUp()&quot; *ngIf&#x3D;&quot;!isAuth&quot;&gt;
         Sign Up!
       &lt;/button&gt;
     &lt;/div&gt;
@@ -503,43 +497,42 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./home.component.css</code>
+                    <code>./home.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.home {
   background: url(/assets/img/home-image.jpg) no-repeat center center/cover;
   height: calc(100% - 64px);
-  position: relative;
-}
-
-.overlay {
-  height: 100%;
+  position: fixed;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 
-.home__cta {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  width: 30%;
-  min-width: 25rem;
-  height: 100%;
-}
-
-.home__cta p {
-  line-height: 1.6;
-  font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 599px) {
-  .home {
+  @media only screen and (max-width: 599px) {
     height: calc(100% - 56px);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .home__cta {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 30%;
+      min-width: 250px;
+      height: 100%;
+
+      p {
+        line-height: 1.6;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 </code></pre>
@@ -570,8 +563,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="home">  <div class="overlay">    <div class="home__cta">      <p>        devDo helps you to keep track of your project progress and never miss a        deadline.      </p>      <button        mat-raised-button        class="mat-elevation-z24"        color="primary"        (click)="onSignUp()"        *ngIf="!isAuth"      >        Sign Up!      </button>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardComponent', 'selector': 'app-board'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
+        var COMPONENT_TEMPLATE = '<div><div class="home">  <div class="overlay">    <div class="home__cta">      <p>        devDo helps you to keep track of your project progress and never miss a deadline.      </p>      <button mat-raised-button class="mat-elevation-z24" color="primary" (click)="onSignUp()" *ngIf="!isAuth">        Sign Up!      </button>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'app-create-project'},{'name': 'CreateTaskComponent', 'selector': 'app-create-task'},{'name': 'DialogComponent', 'selector': 'app-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ResetPasswordComponent', 'selector': 'app-reset-password'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TasksCardListComponent', 'selector': 'app-tasks-card-list'},{'name': 'TasksComponent', 'selector': 'app-tasks'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'VerifyEmailComponent', 'selector': 'app-verify-email'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>
